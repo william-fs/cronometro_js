@@ -1,5 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    background: linear-gradient(269deg, #b0762a, #8a8a8a, #b0762a, #8a8a8a);
+    background-size: 800% 800%;
+    -webkit-animation: bgAnimation 11s ease infinite;
+    animation: bgAnimation 11s ease infinite;
+}
+
+@-webkit-keyframes bgAnimation {
+    0%{background-position:0% 44%}
+    50%{background-position:100% 57%}
+    100%{background-position:0% 44%}
+}
+@keyframes bgAnimation {
+    0%{background-position:0% 44%}
+    50%{background-position:100% 57%}
+    100%{background-position:0% 44%}
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#cronometro {
+    position: relative;
+    max-width: 300px;
+    max-height: 300px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#border {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 20px solid;
+    border-color: black orange black orange;
+    border-radius: 50%;
+}
+
+#inter {
+    position: relative;
+    max-width: 250px;
+    max-height: 250px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(190, 190, 190);
+    flex-direction: column;
+}
+
+#visor {
+    position: relative;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    background-color: black;
+    color:aqua;
+    font-family: monospace;
+}
+
+#controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.icon img {
+    width: 30px;
 }
